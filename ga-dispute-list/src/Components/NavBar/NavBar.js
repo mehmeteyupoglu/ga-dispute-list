@@ -5,13 +5,12 @@ import Styled from "styled-components"
 
 export const StyledNav = Styled(Navbar)`
 
-background-color: #141417; 
-box-shadow: 0px 2px 45px #141417; 
+background-color: #17171a;
+box-shadow: 0px 2px 20px black;
 img {
     width: 15%; 
     height: 15%; 
 }
-
 `
 
 const NavBar = (props) => {
