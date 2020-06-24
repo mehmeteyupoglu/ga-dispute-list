@@ -4,7 +4,11 @@ import { faKhanda } from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { StyledCard } from "./styles"
 
+
+
 const DisputeCard = (props) => {
+
+    const logo = require('../../../Assets/Game Logo.png')
     const [response, setState ] = useState(props)
     
     useEffect(() => {
@@ -12,6 +16,11 @@ const DisputeCard = (props) => {
         setState(props)
         console.log(response)
     });
+
+    function convertDate(dateString){
+        var p = dateString.split(/\D/g)
+        return [p[2],p[1],p[0] ].join(".")
+        }
 
     return (
         <StyledCard>
@@ -21,7 +30,7 @@ const DisputeCard = (props) => {
                     return (
                         <div className="component">
                             <div className="logo">
-                                <img src="/Assets/Game Logo.png" alt="game logo"/>  
+                                <img src={logo} alt="game logo"/>  
                             </div>
                             <div className="names">
                                 <div>doruk {" "} 
@@ -35,7 +44,7 @@ const DisputeCard = (props) => {
                             </div>
                             <div className="creator">
                                 <div className="upper-body">
-                                    Oluşturan
+                                    Oluşturan 
                                 </div>
                                 <div className="lower-body">
                                     {item.creator}
@@ -46,8 +55,9 @@ const DisputeCard = (props) => {
                                     Tarih
                                 </div>
                                 <div className="lower-body">
-                                {Date(`${item.match.createdAt}`)}
-                                    
+                                {
+                                    convertDate(item.match.createdAt.slice(0, 10))
+                                } 
                                 </div>
                             </div>
                             <div className="durum">

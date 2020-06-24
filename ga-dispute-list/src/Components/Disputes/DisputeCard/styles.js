@@ -21,6 +21,7 @@ export const StyledCard = styled.div`
     .logo {
         display: flex; 
         flex: 10%; 
+        padding-left: 10px; 
     }
     .names {
         display: flex; 

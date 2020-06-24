@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import pubg from "../src/Assets/pubg.jpeg"
+
 
 export const StyledApp = styled.div`
 
@@ -11,13 +13,13 @@ export const StyledApp = styled.div`
         box-shadow: 0px 2px 5px 5px #0d0d0d   ; 
     }
     .main-body {
-        background-image: url("https://img.freepik.com/free-photo/3d-grunge-room-interior-with-spotlight-smoky-atmosphere-background_1048-11333.jpg?size=626&ext=jpg");
+        background-image: url(${pubg});
         background-position: center; 
         background-repeat: no-repeat; 
         background-size: cover;
         height: 350px;  
         flex: 80%; 
-        z-index: 1;
+        
     }
 }
 
