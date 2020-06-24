@@ -58,6 +58,17 @@ export const StyledCard = styled.div`
         font-size: 13px;
         line-height: 15px; 
     }
+    .red {
+        color: #EB2C44
+    }
+
+    .yellow {
+        color: #EEB502;
+    }
+
+    .green {
+        color: #00C202;
+    }
     
 
 }

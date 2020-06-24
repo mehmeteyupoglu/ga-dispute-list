@@ -55,7 +55,11 @@ const DisputeCard = (props) => {
                                     Durum
                                 </div>
                                 <div className="lower-body">
-                                    {item.statusData}
+                                    <p className={
+                                        item.statusData === "Bekleniyor" ? "yellow": 
+                                        item.statusData === "Kabul Edildi" ? "green": 
+                                        "red"
+                                    }>{item.statusData}</p>
                                 </div>
                             </div>
                         </div>
