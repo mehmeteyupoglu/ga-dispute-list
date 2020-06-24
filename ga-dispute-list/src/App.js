@@ -1,35 +1,23 @@
 import React from 'react';
 import './App.css';
-import { Header, Disputes, NavBar } from './Components' 
-import { Container, Row, Col } from 'reactstrap';
-
-import Styled from "styled-components"
-
-export const StyledRow = Styled(Row)`
-
-padding: 250px 50px; 
-color: white; 
-background-color: #17171a; 
-box-shadow: 0px 2px 45px #141417; 
-
-`
-
+import { Header, Disputes, NavBar } from './Components'
+import { StyledApp } from "./styles"
 
 function App(props) {
   return (
+    <StyledApp>
     <div className="App">
-      <NavBar />
-      <Container>
-        <StyledRow>
-          <Row>
-            <Col sm="12" md={{ size: 9, offset: 0 }}>
-              <Header />
-              <Disputes />
-            </Col>
-          </Row>
-        </StyledRow>
-      </Container>
+        <NavBar />
+        <div className="below">
+          <div className="side-bar"></div>
+          <div className="main-body">
+            <div className="bg-img"></div>
+            <Header />
+            <Disputes /> 
+          </div>
+        </div>
     </div>
+    </StyledApp>
   );
 }
 

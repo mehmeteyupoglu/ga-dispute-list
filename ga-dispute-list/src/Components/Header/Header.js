@@ -4,10 +4,10 @@ import { StyledHeader } from "./styles"
 const Header = () => {
     return (
         <div>
-        <StyledHeader>
-            <h1>İtirazlar</h1>
-            <input type="text" placeholder="Kullanıcı ara"/>
-        </StyledHeader>
+            <StyledHeader>
+                <h1>İtirazlar</h1>
+                <input type="text" placeholder="Kullanıcı ara"/>
+            </StyledHeader>
         </div>
     );
 }
