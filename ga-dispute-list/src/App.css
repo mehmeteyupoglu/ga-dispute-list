@@ -1,0 +1,12 @@
+.below {
+    display: flex;
+    justify-content: center;
+}
+
+.side-bar {
+    flex: 30%;  
+}
+
+.main-body {
+    flex: 70%;   
+}
