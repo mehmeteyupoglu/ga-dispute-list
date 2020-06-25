@@ -26,26 +26,28 @@ export const StyledCard = styled.div`
     .names {
         display: flex; 
         flex: 35%; 
-        flex-direction: column; 
-        .duello{
+        justify-content: space-between; 
+            .duello{
             font-size: 12px;
             line-height: 14px;
             color: #9B9B9B; 
             .circle {
                 font-size: 7px;
             }
-        }
+        } 
     }
     .creator {
         display: flex; 
         flex: 15%; 
-        flex-direction: column; 
-        
+        flex-direction: row; 
+        justify-content: space-between;  
+        }
+   
     }
     .date {
         display: flex; 
-        flex: 15%; 
-        flex-direction: column; 
+        flex: 15%;
+        justify-content: space-between;  
         
     }
     .durum {
@@ -59,6 +61,8 @@ export const StyledCard = styled.div`
         font-size: 13px;
         line-height: 15px; 
     }
+
+    
     .red {
         color: #EB2C44
     }
@@ -70,6 +74,19 @@ export const StyledCard = styled.div`
     .green {
         color: #00C202;
     }
+    .content{
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+        }
+
+    .verLine {
+        width: 1px;
+        height: 65px;
+        border: 1px solid #FFFFFF;
+        opacity: 0.23;
+        margin-right: 15px; 
+        }
     
 
 }
