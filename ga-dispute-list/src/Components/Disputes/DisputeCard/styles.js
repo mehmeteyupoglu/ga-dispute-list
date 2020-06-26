@@ -87,12 +87,6 @@ export const StyledCard = styled.div`
         opacity: 0.23;
         margin-right: 15px; 
         }
-    
-
 }
-
-
-
-
 
 `

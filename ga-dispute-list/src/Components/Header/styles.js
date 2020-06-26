@@ -35,7 +35,4 @@ padding: 0 0 0 20px;
         margin-right: 10px; 
     }
 }
-
-
-
 `
