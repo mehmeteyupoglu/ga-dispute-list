@@ -12,7 +12,7 @@ export const StyledCard = styled.div`
     margin-left: 20px; 
     color: white; 
     font-family: Ubuntu; 
-    font-weight: 200; 
+    font-weight: 500; 
     width: 928px;
     height: 123px;
     background: #1C1C21;
@@ -24,6 +24,7 @@ export const StyledCard = styled.div`
         padding-left: 10px; 
     }
     .names {
+        color: white;  
         display: flex; 
         flex: 35%; 
         justify-content: space-between; 
@@ -54,7 +55,6 @@ export const StyledCard = styled.div`
         display: flex; 
         flex: 25%; 
         flex-direction: column; 
-        
     }
     .upper-body {
         color: #9B9B9B;
