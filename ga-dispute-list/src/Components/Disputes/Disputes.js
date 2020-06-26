@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector, connect } from 'react-redux'
-import { getInfo } from '../../state/Actions'
+import React from 'react';
 import DisputeCard from "./DisputeCard"
 
-const axios = require('axios');
-const API = 'https://api.staging.gamerarena.com/disputes/'
-
-const Disputes = (props) => {
+const Disputes = () => {
 
     return (
-        
         <div>
             <DisputeCard />
         </div>
     );
 }
 
-const mapStateToProps = state => ({ state: state.apiInfo.apiInfo[0] })
-
-export default connect(mapStateToProps)(Disputes);
+export default Disputes;
