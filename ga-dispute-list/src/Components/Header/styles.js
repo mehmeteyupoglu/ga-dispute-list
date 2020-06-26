@@ -12,7 +12,7 @@ margin-bottom: 50px;
 font-family: Ubuntu; 
 font-size: 30px; 
 color: white; 
-padding: 200px 0 0 20px; 
+padding: 0 0 0 20px; 
 
 .wrapper{
     display: flex; 

@@ -12,8 +12,10 @@ function App(props) {
           <div className="side-bar"></div>
           <div className="main-body">
             <div className="bg-img"></div>
-            <Header />
-            <Disputes /> 
+            <div className="disputes">
+              <Header />
+              <Disputes /> 
+            </div>
           </div>
         </div>
     </div>
