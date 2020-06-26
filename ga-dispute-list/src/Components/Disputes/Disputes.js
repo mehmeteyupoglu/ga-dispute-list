@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector, connect } from 'react-redux'
+import { getInfo } from '../../state/Actions'
 import DisputeCard from "./DisputeCard"
 
 const axios = require('axios');
@@ -6,24 +8,14 @@ const API = 'https://api.staging.gamerarena.com/disputes/'
 
 const Disputes = (props) => {
 
-
-    const [response, setResponse] = useState([]);
-    
-useEffect(() => {
-  
-    axios.get(`https://api.staging.gamerarena.com/disputes/`)
-    .then(function (response) {
-        setResponse(response.data.results)
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
-},[]);
     return (
+        
         <div>
-            <DisputeCard response={response}/>
+            <DisputeCard />
         </div>
     );
 }
 
-export default Disputes;
+const mapStateToProps = state => ({ state: state.apiInfo.apiInfo[0] })
+
+export default connect(mapStateToProps)(Disputes);

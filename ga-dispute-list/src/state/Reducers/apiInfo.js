@@ -10,7 +10,7 @@ let initialState = {
     case 'FETCH_INFO':
       return {
         ...state,
-        productItems: [...state.apiInfo, action.payload.data],
+        apiInfo: [...state.apiInfo, action.payload.data],
         loading: false
       };
   

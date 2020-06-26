@@ -14,15 +14,28 @@ font-size: 30px;
 color: white; 
 padding: 200px 0 0 20px; 
 
-
-input {
+.wrapper{
     display: flex; 
+    justify-content: space-between; 
+    align-items: center;
     background-color: #1d1d21; 
     height: 2.5em; 
     width: 20em; 
     border: 1.1px solid #232328; 
-    border-radius: 0.5em; 
-    font-size: 15px; 
+    border-radius: 0.7em; 
+    font-size: 15px;
+    input{
+        background-color: #1d1d21;
+        border-radius: 0;
+        border: 0; 
+        margin-left: 10px; 
+    }
+    .search {
+        color: #616162; 
+        margin-right: 10px; 
+    }
 }
+
+
 
 `

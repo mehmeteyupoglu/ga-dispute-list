@@ -1,29 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faKhanda, faCircle, faUserPlus, faCalendarAlt, faVectorSquare } from '@fortawesome/free-solid-svg-icons'
+import { useDispatch, useSelector } from 'react-redux'
 import { StyledCard } from "./styles"
+import { getInfo } from '../../../state/Actions'
 
 const DisputeCard = (props) => {
 
     const logo = require('../../../Assets/Game Logo.png')
-    const [response, setState ] = useState(props)
+    const state = useSelector(state => state?.apiInfo?.apiInfo[0]?.results)
+    const [response, setResponse] = useState([])
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+
+        dispatch(getInfo()) ; 
+    
+    }, [] );
     
     useEffect(() => {
-  
-        setState(props)
-        console.log(response)
-    });
+        if(state) {
+        //   console.log("State is ", state);
+          setResponse(state)
+          
+        }
+    
+    }, [state] );
+
+    console.log(response)
 
     function convertDate(dateString){
         var p = dateString.split(/\D/g)
         return [p[2],p[1],p[0] ].join(".")
         }
-
+    if(!state) {
+        return null;
+       }
     return (
         <StyledCard>
         <div>
             {
-                response.response.map(item => {
+                state.map(item => {
                     return (
                         <div className="component">
                             <div className="logo">
