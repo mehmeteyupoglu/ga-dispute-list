@@ -20,14 +20,10 @@ const DisputeCard = (props) => {
     
     useEffect(() => {
         if(state) {
-        //   console.log("State is ", state);
           setResponse(state)
-          
         }
     
     }, [state] );
-
-    console.log(response)
 
     function convertDate(dateString){
         var p = dateString.split(/\D/g)
